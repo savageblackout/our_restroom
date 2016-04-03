@@ -1,7 +1,7 @@
 #Our Restroom
 ![Our Restroom logo](https://i.imgur.com/9DbFG9o.png)
 
-##One of the most insidious and common forms of harmful policies are a result of misinformation or ignorance to the experience of those personally affected.
+##One of the most insidious and common reasons for harmful policies are misinformation or ignorance to the experience of those personally affected.
 
 
 #APPROACH
