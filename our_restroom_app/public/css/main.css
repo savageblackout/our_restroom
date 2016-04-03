@@ -8,9 +8,10 @@ body{
   font-family: 'Ovo', serif;
   width: 90%;
   height: 90%;
-  background-color: #13CF0C;
+  background-color: #53B969;
   font-size: 5em;
+  color: white;
   }
 
 
-a { color: #00B7FF; }
+a { color: #white; }
