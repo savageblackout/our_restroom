@@ -2,12 +2,15 @@
 html,
 body {
   box-sizing: border-box;
-  font-family: "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
-body {
-  font-size: 14px;
-  padding: 50px;
-}
+body{
+  font-family: 'Ovo', serif;
+  width: 90%;
+  height: 90%;
+  background-color: #13CF0C;
+  font-size: 5em;
+  }
+
 
 a { color: #00B7FF; }

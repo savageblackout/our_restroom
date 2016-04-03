@@ -1,15 +1,17 @@
 var mongoose = require('./database');
 
-var User = require('../models/user');
+var Rest = require('../models/rest');
 
-var users = [
+var rests = [
   { // 0
-    handle: "DunkLord",
-    name:   "Bob Neverdunk"
+    name: "Olive Garden",
+    address: "123 Main Street",
+    description: "love this place, but bad bathroom sitch"
   },
   { // 1
-    handle: "MoneyMarge",
-    name:   "Margaret Kalanchoe"
+   name: "Ruby Tuesday",
+   address: "125 Main Street",
+   description: "spoke with the manager, could use a gentle nudge"
   }
 ];
 
@@ -19,7 +21,7 @@ User.remove({}, function(err) {
     if (err) {
       console.log(err);
     } else {
-      console.log("Database seeded with " + users.length  + " users.");
+      console.log("Database seeded with " + rests.length  + " users.");
       mongoose.connection.close(function(err) {
         if (err) console.log(err);
         process.exit(0);
