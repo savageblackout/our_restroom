@@ -7,11 +7,24 @@
 
   function EducateController($log) {
     var vm = this;
-    $log.info("Educate Controller loaded!");
 
+    // BINDINGS
+     vm.bizInfo = {
+      name: "Olive Garden",
+      address1: "123 Main Street",
+      address2: "New York, NY 20876",
+      email: "og@email.com",
+      twitterHandle: "@og"
+    };
+    vm.submitEducateForm = submitEducateForm
+
+
+    // FUNCTIONS
     function submitEducateForm() {
-
+      return bizInfo;
+      $log.info(biz);
     }
+    $log.info("Educate Controller loaded!");
   }
 
 })();

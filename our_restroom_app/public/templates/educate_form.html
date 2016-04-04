@@ -6,26 +6,26 @@
   </div>
 </div>
 
-<form class="educate" ng-submit="vm.submitEducateForm();">
+<form class="educate" name="educateForm" novalidate ng-submit="vm.submitEducateForm();">
   <div class="form-group">
     <label for="name">Business Name</label>
-    <input type="name" class="form-control input-lg" id="bizName" placeholder="ex: This Business Bar">
+    <input type="name" ng-model="vm.bizInfo.name" required class="form-control input-lg" id="bizName" placeholder="ex: This Business Bar">
   </div>
   <div class="form-group">
     <label for="addressLine1">Business Address</label>
-    <input type="address" class="form-control input-lg" id="addressLine1" placeholder="ex: 123 Main Street">
+    <input type="address" ng-model="vm.bizInfo.address1" required class="form-control input-lg" id="addressLine1" placeholder="ex: 123 Main Street">
   </div>
   <div class="form-group">
     <label for="addressLine2">Business Address</label>
-    <input type="address" class="form-control input-lg" id="addressLine2" placeholder="ex: Every City, CA 90205">
+    <input type="address" ng-model="vm.bizInfo.address2" required class="form-control input-lg" id="addressLine2" placeholder="ex: Every City, CA 90205">
   </div>
   <div class="form-group">
     <label for="Email1">Business Email (optional)</label>
-    <input type="email" class="form-control input-lg" id="email1" placeholder="ex: thisbusiness@biz.com">
+    <input type="email" ng-model="vm.bizInfo.email" class="form-control input-lg" id="email1" placeholder="ex: thisbusiness@biz.com">
   </div>
   <div class="form-group">
     <label for="addressLine3">Business Twitter (optional)</label>
-    <input type="twitter" class="form-control input-lg" id="twitterHandle" placeholder="ex: @thisBusiness">
+    <input type="twitter" ng-model="vm.bizInfo.twitterHandle" class="form-control input-lg" id="twitterHandle" placeholder="ex: @thisBusiness">
   </div>
-  <button type="submit" class="btn btn-default btn-block">Submit</button>
+  <button type="submit" ng-disabled="signInForm.$invalid" class="btn btn-default btn-block">Submit</button>
 </form>
