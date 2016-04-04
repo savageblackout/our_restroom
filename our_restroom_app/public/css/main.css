@@ -12,6 +12,7 @@ form.educate{
   padding-top: 2em;
   max-width: 35em;
   margin: 0 auto;
+  text-align: center;
 }
 .form-group {
   color: white;
@@ -63,14 +64,22 @@ label {
   font-family: "Gotham Rounded";
   font-size: 20px;
   color: white;
+  height: 7rem;
 }
 a{
   color: white !important;
 }
+.navbar-header li a{
+  padding-top: 2rem !important;
+}
 .navbar-header img {
   margin-left: 0em;
 }
-
+.btn-block {
+  height: 5rem !important;
+  font-size: 3rem !important;
+}
 .footer {
   padding-top: 2em;
+  bottom: 0;
 }

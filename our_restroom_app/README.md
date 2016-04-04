@@ -44,7 +44,7 @@ media such as Twitter.
 - [Wexgen](https://github.com/h4w5/wexgen): for generating a WDI-specific application structure  
 - [Bootstrap](http://getbootstrap.com/): for adding snazzy style  
 
-
+##Check out User Stories on [Trello](https://trello.com/b/NClftgba/our-restroom)!
 
 
 

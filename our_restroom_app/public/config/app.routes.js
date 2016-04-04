@@ -17,7 +17,9 @@
     })
     .state("educate", {
       url: "/educate",
-      templateUrl: "/templates/educate_form.html"
+      templateUrl: "/templates/educate_form.html",
+      controller: "EducateController",
+      controllerAs: "vm"
     })
 
   $urlRouterProvider.otherwise("/");
