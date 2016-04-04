@@ -15,6 +15,10 @@
       url: "/about",
       templateUrl: "/templates/about.html"
     })
+    .state("educate", {
+      url: "/educate",
+      templateUrl: "/templates/educate_form.html"
+    })
 
   $urlRouterProvider.otherwise("/");
   }
