@@ -1,32 +1,48 @@
 <!DOCTYPE html>
 <html ng-app="our">
 <head>
-  <title>OUR RESTROOM</title>
+  <title>OUR Restroom</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <link href="https://fonts.googleapis.com/css?family=Ovo" rel="stylesheet" type="text/css">
+  <link href="//db.onlinewebfonts.com/c/d31d488d2171c1668c15962fc6cf1ef7?family=Gotham+Rounded" rel="stylesheet" type="text/css"/>
   <link rel="stylesheet" type="text/css" href="/css/main.css">
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-  <!-- Optional theme -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
   <!-- Latest compiled and minified JavaScript -->
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.18/angular-ui-router.js"></script>
+
 
 </head>
 <body>
-  <div class="header">
-
-  Welcome to Our Restroom
-
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <img alt="Brand" src="https://i.imgur.com/YpUDPVE.png">
+      <ul class="nav navbar-nav navbar-left">
+        <li><a ui-sref="welcome">Home</a></li>
+      </ul>
+      <ul class="nav navbar-nav">
+        <li><a ui-sref="about">About</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a ui-sref="#">Educate A Business!</a></li>
+      </ul>
+   </div>
   </div>
-  <main>
-
-  </main>
+</nav>
+<div class="full-logo">
+  <img ui-sref="#" src="https://i.imgur.com/e8WDgbr.png">
+</div>
+<main class="content" ui-view>
+<!-- LOAD TEMPLATES HERE -->
+</main>
 <script src="/js/app.module.js"></script>
+<script src="/config/app.routes.js"></script>
+<script src="/navbar.controller.js"></script>
 </body>
 </html>
 
