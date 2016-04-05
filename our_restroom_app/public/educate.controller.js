@@ -21,8 +21,8 @@
 
     // FUNCTIONS
     function submitEducateForm() {
-      return bizInfo;
-      $log.info(biz);
+
+      $log.info(vm.bizInfo);
     }
     $log.info("Educate Controller loaded!");
   }
