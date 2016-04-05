@@ -6,7 +6,7 @@
   </div>
 </div>
 
-<form class="educate" name="educateForm" novalidate ng-submit="vm.submitEducateForm();">
+<form class="educate" name="educateForm" novalidate ng-submit="vm.submitBusinessForm()">
   <div class="form-group">
     <label for="name">Business Name</label>
     <input type="name" ng-model="vm.bizInfo.name" required class="form-control input-lg" id="bizName" placeholder="ex: This Business Bar">
@@ -27,5 +27,5 @@
     <label for="addressLine3">Business Twitter (optional)</label>
     <input type="twitter" ng-model="vm.bizInfo.twitterHandle" class="form-control input-lg" id="twitterHandle" placeholder="ex: @thisBusiness">
   </div>
-  <button type="submit" ng-disabled="signInForm.$invalid" class="btn btn-default btn-block">Submit</button>
+  <button type="submit"  class="btn btn-default btn-block">Submit</button>
 </form>

@@ -1,31 +1,28 @@
 var mongoose = require('./database');
 
-var Rest = require('../models/rest');
+var Business = require('../models/business');
 
-var rests = [
+var businesses = [
   { // 0
     name: "Olive Garden",
-    address: "123 Main Street",
-    description: "love this place, but bad bathroom sitch"
+    address1: "123 Main Street",
+    address2: "New York, NY 90210",
+    email: "example@email.com",
+    twitterHandle: "@og"
+
   },
   { // 1
    name: "Ruby Tuesday",
-   address: "125 Main Street",
-   description: "spoke with the manager, could use a gentle nudge"
+   address1: "125 Main Street",
+   address2: "New York, NY 90210",
+   email: "example@email.com",
+   twitterHandle: "@rb"
+
   }
 ];
 
-User.remove({}, function(err) {
-  if (err) console.log(err);
-  User.create(users, function(err, users) {
-    if (err) {
-      console.log(err);
-    } else {
-      console.log("Database seeded with " + rests.length  + " users.");
-      mongoose.connection.close(function(err) {
-        if (err) console.log(err);
-        process.exit(0);
-      });
-    }
-  });
-});
+Business.create(businesses, function(err, businesses){
+  if(err) console.log(err);
+  console.log("Businesses created: ", businesses.length)
+})
+

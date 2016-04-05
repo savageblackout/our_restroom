@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html ng-app="our">
 <head>
-  <title>OUR Restroom</title>
+  <title>Our Restroom</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <link href="//db.onlinewebfonts.com/c/d31d488d2171c1668c15962fc6cf1ef7?family=Gotham+Rounded" rel="stylesheet" type="text/css"/>
   <link rel="stylesheet" type="text/css" href="/css/main.css">
@@ -28,31 +28,36 @@
       <ul class="nav navbar-nav">
         <li><a ui-sref="about">About</a></li>
       </ul>
+      <ul class="nav navbar-nav">
+        <li><a ui-sref="businesses">Show Businesses</a></li>
+      </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><a ui-sref="educate">Educate A Business!</a></li>
+        <li><a ui-sref="add">Educate A Business!</a></li>
       </ul>
    </div>
   </div>
 </nav>
-<main class="content" ui-view>
-<!-- LOAD TEMPLATES HERE -->
-</main>
-<footer class="footer">
-  <div class="container">
-    <ul class="nav navbar-nav navbar-left">
-      <li><a class="aboutUs" ui-sref="#">About Us</a></li>
-    </ul>
-    <ul class="nav navbar-nav">
-      <li><a class="connect" ui-sref="#">Connect</a></li>
-    </ul>
-    <ul class="nav navbar-nav">
-      <li><a class="share" ui-sref="#">Share</a></li>
-    </ul>
-  </div>
-</footer>
+  <main class="container" ui-view>
+  <!-- LOAD TEMPLATES HERE -->
+  </main>
+  <footer class="footer">
+    <div class="container">
+      <ul class="nav navbar-nav navbar-left">
+        <li><a class="aboutUs" ui-sref="#">About Us</a></li>
+      </ul>
+      <ul class="nav navbar-nav">
+        <li><a class="connect" ui-sref="#">Connect</a></li>
+      </ul>
+      <ul class="nav navbar-nav">
+        <li><a class="share" ui-sref="#">Share</a></li>
+      </ul>
+    </div>
+  </footer>
 <script src="/js/app.module.js"></script>
 <script src="/config/app.routes.js"></script>
-<script src="/educate.controller.js"></script>
+<script src="/js/business.service.js"></script>
+<script src="/js/business.controller.js"></script>
+<script src="/js/add.controller.js"></script>
 </body>
 </html>
 

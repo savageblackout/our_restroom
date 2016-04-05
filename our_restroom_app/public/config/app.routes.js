@@ -15,14 +15,21 @@
       url: "/about",
       templateUrl: "/templates/about.html"
     })
-    .state("educate", {
-      url: "/educate",
-      templateUrl: "/templates/educate_form.html",
-      controller: "EducateController",
+    .state("businesses", {
+      url: "/businesses",
+      templateUrl: "/templates/businesses.html",
+      controller: "BusinessController",
       controllerAs: "vm"
     })
+    .state("add", {
+      url: "/add",
+      templateUrl: "/templates/business_form.html",
+      controller: "AddController",
+      controllerAs: "vm"
+    });
 
-  $urlRouterProvider.otherwise("/");
+
+    $urlRouterProvider.otherwise("/");
   }
 
 })();

@@ -12,7 +12,7 @@ var debug        = require('debug')('app:http');
 // Load local libraries.
 var env      = require('./config/environment'),
     mongoose = require('./config/database');
-    // routes   = require('./routes/api_routes');
+    routes   = require('./routes/api.routes');
 
 // Instantiate a server application.
 var app = express();
@@ -50,7 +50,7 @@ app.use(debugReq);
 app.use(validateContentType);
 
 // Our routes.
-// app.use('/api', routes);
+app.use('/api', routes);
 
 // Catches all 404 routes.
 app.use(function(req, res, next) {

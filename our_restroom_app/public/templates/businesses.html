@@ -1,0 +1,18 @@
+<h1 class="text-center">Businesses</h1>
+
+<div class="row">
+  <div class="col-xs-8">
+  </div>
+  <div class="col-xs-4 text-right">
+    <a ui-sref="add" id="to-biz-form" class="btn btn-default">
+      <span class="glyphicon glyphicon-ok"></span> Add Business
+    </a>
+  </div>
+</div>
+<div class="row">
+  <ul>
+    <li ng-repeat="biz in vm.businessService.businesses track by $index">
+      <h3>{{biz.name}}</h3> <span class="glyphicon glyphicon-plus"></span>
+    </li>
+  </ul>
+</div>
