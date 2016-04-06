@@ -6,7 +6,8 @@ var businessSchema = new mongoose.Schema({
   address1: { type: String },
   address2: { type: String },
   email: { type: String, required: false },
-  twitterHandle: { type: String, required: false }
+  twitterHandle: { type: String, required: false },
+  upVote: { type: Number, default: 0 }
 });
 
 var Business = mongoose.model('Business', businessSchema);

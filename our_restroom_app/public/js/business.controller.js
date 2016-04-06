@@ -11,7 +11,7 @@
     // BINDINGS
 
     vm.businessService = businessService;
-
+    vm.upVote = businessService.upVote;
 
     // FUNCTIONS
 

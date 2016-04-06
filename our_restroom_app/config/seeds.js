@@ -8,7 +8,8 @@ var businesses = [
     address1: "123 Main Street",
     address2: "New York, NY 90210",
     email: "example@email.com",
-    twitterHandle: "@og"
+    twitterHandle: "@og",
+    upVote: 5
 
   },
   { // 1
@@ -16,13 +17,18 @@ var businesses = [
    address1: "125 Main Street",
    address2: "New York, NY 90210",
    email: "example@email.com",
-   twitterHandle: "@rb"
+   twitterHandle: "@rb",
+   upVote: 45
 
   }
 ];
 
-Business.create(businesses, function(err, businesses){
+Business.remove({}, function(err, succ){
   if(err) console.log(err);
-  console.log("Businesses created: ", businesses.length)
-})
+  Business.create(businesses, function(err, businesses){
+    if(err) console.log(err);
+    console.log("Businesses created: ", businesses.length)
+  });
+});
+
 

@@ -14,7 +14,7 @@
       address1: "123 Main Street",
       address2: "New York, NY 20876",
       email: "og@email.com",
-      twitterHandle: "@og"
+      twitterHandle: "@og",
     };
     vm.submitBusinessForm = submitBusinessForm;
     vm.businessService = businessService;

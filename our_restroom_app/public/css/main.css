@@ -37,6 +37,13 @@ input .form-control {
 label {
   font-size: 3rem;
 }
+ul
+{
+list-style-type: none;
+}
+#biz-name {
+  font-size: 3rem;
+}
 
 .col-md-9{
   padding-top: 2em;
@@ -51,7 +58,17 @@ label {
   text-align: center;
   color: white;
 }
+span {
+  color: white;
+}
 
+h4 {
+  color: white !important;
+}
+
+.glyphicon-ok {
+  color: black
+}
 
 .full-logo img {
   max-width: 50%;
