@@ -7,7 +7,7 @@
 
   function businessService($log, $http) {
     $log.info("business service loaded!");
-
+    var vm = this;
     var service = {
       create: create,
       businesses: [],

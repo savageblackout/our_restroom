@@ -12,19 +12,14 @@
 
     vm.businessService = businessService;
     vm.upVote = businessService.upVote;
-    vm.searchBizResults = [];
-    vm.searchResults = {
-      bizName: "",
-      bizAddress1: "",
-      bizAddress2: ""
-    };
     vm.getBizName = getBizName;
+    vm.claire = true;
+    vm.showAfterSearch = showAfterSearch;
 
     // FUNCTIONS
+
     function getBizName(val) {
-      $log.info("click is working!");
-      // $state.go('search');
-      $log.info(val);
+      vm.claire = false;
       $http.get("api/businesses?search=" + val)
       .then(function(res) {
         $log.info(res.data);
@@ -34,8 +29,10 @@
       });
     }
 
-
-
+    function showAfterSearch(){
+      vm.claire = true;
+      businessService.showAllBiz();
+    }
 
     $log.info("Business Controller loaded!");
   }
