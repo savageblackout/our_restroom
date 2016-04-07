@@ -11,8 +11,7 @@
     var service = {
       create: create,
       businesses: [],
-      upVote: upVote,
-      // uniqueUpVote: uniqueUpVote
+      upVote: upVote
     };
 
     $http.get("/api/businesses").then(function(res) {
@@ -41,7 +40,7 @@
         url: "api/businesses/" + biz._id,
         data: biz,
         headers: {
-          'Content-Type': 'application/json'
+          'Content-Type': "application/json"
         }
        }).then(function(res) {
         $log.info("Success: ", res);
@@ -50,19 +49,6 @@
       });
       $log.info(biz);
     }
-
-    // function uniqueUpVote(){
-    //   businesses.filter('uniqueId', function () {
-    //   return function(inputs,filterValues) {
-    //   var output = [];
-    //   angular.forEach(inputs, function (input) {
-    //     if (filterValues.indexOf(input.id) !== true)
-    //         output.push(input);
-    //    });
-    //    return output;
-    //   };
-    //   });
-    // }
 
     return service;
   }

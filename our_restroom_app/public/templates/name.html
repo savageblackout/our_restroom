@@ -1,0 +1,11 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="cold-md-8">
+      <ul ng-repeat="bizName in vm.getBizName | filter:query">
+        <li>{{vm.searchResults.bizName}}</li>
+        <li>{{vm.searchResults.bizAddress1}}</li>
+        <li>{{vm.searchResults.bizAddress2}}</li>
+      </ul>
+    </div>
+  </div>
+</div>

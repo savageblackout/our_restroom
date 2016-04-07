@@ -26,8 +26,13 @@
       templateUrl: "/templates/business_form.html",
       controller: "AddController",
       controllerAs: "vm"
+    })
+    .state("search", {
+      url: "/searches",
+      templateUrl: "/templates/name.html",
+      controller: "SearchController",
+      controllerAs: "vm"
     });
-
 
     $urlRouterProvider.otherwise("/");
   }

@@ -28,14 +28,30 @@ to and make all of their patrons comfortable.
 
 ##Kroger has the right idea:  
 
-![Kroger posts a note on their bathroom explaining why they utilize non-gendered single-stall restrroms](https://40.media.tumblr.com/468e9567a4801b118d52cfa93d05cc34/tumblr_o4t2k959eS1qcqoybo1_500.jpg)
+![Kroger posts a note on their bathroom explaining why they utilize non-gendered single-stall restrooms](https://40.media.tumblr.com/468e9567a4801b118d52cfa93d05cc34/tumblr_o4t2k959eS1qcqoybo1_500.jpg)
 
 The goal is to create a user-generated database that will store business information
 and reach out to these business via postal mail, email, and potentially via social 
 media such as Twitter.
 
-#MODELS  
-![user and biz models for Our Restroom](https://i.imgur.com/V11Z8wp.png)
+#USE
+
+Arriving at the welcome page, you will have the option to read about the site/project,
+fill out a form with business information that you would like to be educated about
+the benefits of non-gender-specific single-stall restrooms, see a list of businesses that 
+are in the site's database, and search this list of businesses in the site's database.
+In addition, if you see a business that you would like to add to the database by
+filling out the name and address on the Educate a Business page already exists 
+in the database, you can click the "+" next to the business to give it an "up vote".
+Rather than flood the site's database with potential repeats of the same business, 
+with the click of a button you can piggyback on a business that has already been entered in the 
+database!
+
+
+
+#MODELS
+  
+![user and biz models for Our Restroom](https://i.imgur.com/fSD2Dt7.png)
 
 #TECHNOLOGIES USED  
 - CSS/HTML/JavaScript: for basic structure, style, and templating  
@@ -46,6 +62,42 @@ media such as Twitter.
 
 ##Check out User Stories on [Trello](https://trello.com/b/NClftgba/our-restroom)!
 
+#API DOCUMENTATION
+
+**Our API currently returns JSON.** 
+
+##Actions: `/`
+
+##GET: `api/businesses`  
+gets the index of businesses  
+
+- `name: Type: String`
+- `address1: Type: String`
+- `address2: Type: String`
+- `email: Type: String`
+- `twitterHandle: Type: String`
+- `upVotes: Type: Number`
+- `updatedPolicy: Type: Text`
+
+##POST: `api/businesses`  
+post a new business to the database
+
+##PUT `api/businesses/:id`
+updates the "up vote" parameter of the business with one vote per click, 
+per business, per user
+
+##GET: `api/searches`  
+gets the index of businesses returned as a result of a user search  
+
+
+
+#ON THE HORIZON
+
+Stay tuned for updates! If you would like to check back and see that a business
+that you have added to the database has altered their restroom policy, we will be updating 
+our database on a regular basis. The admin of the site will have the capability
+of updating businesses on the database. Users that have signed up 
+to receive updates will be sent this information via email. 
 
 
 #RESOURCES
