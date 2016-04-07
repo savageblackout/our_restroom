@@ -10,11 +10,11 @@
 
     // BINDINGS
      vm.bizInfo = {
-      name: "Olive Garden",
-      address1: "123 Main Street",
-      address2: "New York, NY 20876",
-      email: "og@email.com",
-      twitterHandle: "@og",
+      name: "",
+      address1: "",
+      address2: "",
+      email: "",
+      twitterHandle: "",
     };
     vm.submitBusinessForm = submitBusinessForm;
     vm.businessService = businessService;

@@ -62,6 +62,9 @@ and search this list of businesses in the site's database.
 In addition, if you see a business that you would like to add to the database by
 filling out the name and address on the Educate a Business page already exists 
 in the database, you can click the "+" next to the business to give it an "up vote".
+
+!["up vote" a business](https://i.imgur.com/UnxKuqx.png)
+
 Rather than flood the site's database with potential repeats of the same business, 
 with the click of a button you can piggyback on a business that has already been entered in the 
 database!

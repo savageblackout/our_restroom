@@ -11,14 +11,19 @@
     var service = {
       create: create,
       businesses: [],
-      upVote: upVote
+      upVote: upVote,
+      showAllBiz: showAllBiz
     };
 
-    $http.get("/api/businesses").then(function(res) {
-      service.businesses = res.data;
-    }, function(err) {
-      $log.info(err);
-    });
+    function showAllBiz(){
+      $http.get("/api/businesses").then(function(res) {
+        service.businesses = res.data;
+      }, function(err) {
+        $log.info(err);
+      });
+    }
+
+    showAllBiz();
 
     function create(data) {
       return $http({
@@ -34,7 +39,7 @@
     }
 
     function upVote(biz) {
-      biz.upVote++;
+
       return $http({
         method: 'PUT',
         url: "api/businesses/" + biz._id,
@@ -43,7 +48,8 @@
           'Content-Type': "application/json"
         }
        }).then(function(res) {
-        $log.info("Success: ", res);
+        $log.info("Success: ", res.data.upVote);
+        if(res.data.upVote != biz.upVote) biz.upVote++;
       }, function(err) {
         $log.info(err);
       });
@@ -51,6 +57,10 @@
     }
 
     return service;
+
+    // function clickLimit() {
+    //   var u
+    // }
   }
 
 })();

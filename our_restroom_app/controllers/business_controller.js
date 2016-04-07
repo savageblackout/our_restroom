@@ -1,11 +1,24 @@
 var Business = require("../models/business");
 
 function index(req, res) {
-  Business.find({}).then(function(data) {
-    res.json(data);
-  }, function(err) {
-    res.json(err);
-  });
+  if(req.query.search){
+    Business.find({}).then(function(data) {
+      var reg = new RegExp(req.query.search, "i");
+      data = data.filter(function(biz) {
+        if(reg.test(biz.name)) return biz
+      })
+
+      res.json(data);
+    }, function(err) {
+      res.json(err);
+    });
+  } else{
+    Business.find({}).then(function(data) {
+      res.json(data);
+    }, function(err) {
+      res.json(err);
+    });
+  }
 }
 
 function create(req, res) {
@@ -30,18 +43,19 @@ function create(req, res) {
 };
 var update = function(req, res) {
   var id = req.params.id;
-
+  console.log(req.cookies.userId);
   Business.findById(id, function(err, business) {
 
     if (err) {
       res.send(err);
     }
 
-    // set the new fish information if it exists in the request
-    if (req.body.upVote) business.upVote = req.body.upVote;
-    // if (req.body.category) fish.category = req.body.category;
-
-    // save the fish
+    if (req.cookies.userId) {
+      if (business.upVoters.indexOf(req.cookies.userId) === -1) {
+        business.upVoters.push(req.cookies.userId);
+        business.upVote++;
+      }
+    }
     business.save(function(err, updatedBusiness) {
       if (err) {
         res.send(err);
