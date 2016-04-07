@@ -12,6 +12,7 @@
 
     vm.businessService = businessService;
     vm.upVote = businessService.upVote;
+    // vm.uniqueUpVote = uniqueUpVote;
 
     // FUNCTIONS
 

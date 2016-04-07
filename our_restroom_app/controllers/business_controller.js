@@ -54,20 +54,6 @@ var update = function(req, res) {
   });
 }
 
-// function update(req, res) {
-//   // var business = new Business();
-//   console.log(req.body);
-
-//   business.upVote = req.body.upVote;
-
-//   business.save(function(err, savedBusiness) {
-//     if(err){
-//       res.send(err);
-//     } console.log("saved an upvote!");
-//     res.json(savedBusiness);
-//   })
-// }
-
 module.exports = {
   index: index,
   create: create,

@@ -17,6 +17,34 @@ form.educate{
 .form-group {
   color: white;
 }
+.search-btn{
+  padding-left: 2rem;
+}
+
+.search-label {
+  font-size: 3rem;
+  padding-left: 3rem;
+}
+
+.input-group {
+  display: inline-flex !important;
+}
+
+.add-business {
+  height: 35px;
+  margin-top: -18px;
+}
+
+.search-stuff {
+  display: flex;
+}
+
+.full-logo img {
+  max-width: 50%;
+  max-height: 40%;
+  z-index: 100;
+  margin-left: 5em;
+}
 h1 {
   color: white !important;
   font-family: "Gotham Rounded", sans-serif !important;
@@ -70,15 +98,9 @@ h4 {
   color: black
 }
 
-.full-logo img {
-  max-width: 50%;
-  max-height: 40%;
-  z-index: 100;
-  margin-left: 20em;
-}
 
 .full-logo-about {
-  width: 10em;
+  width: 15em;
   height: 10em;
 }
 

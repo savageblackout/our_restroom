@@ -11,7 +11,8 @@
     var service = {
       create: create,
       businesses: [],
-      upVote: upVote
+      upVote: upVote,
+      // uniqueUpVote: uniqueUpVote
     };
 
     $http.get("/api/businesses").then(function(res) {
@@ -34,9 +35,8 @@
     }
 
     function upVote(biz) {
-      $log.info(biz);
       biz.upVote++;
-       return $http({
+      return $http({
         method: 'PUT',
         url: "api/businesses/" + biz._id,
         data: biz,
@@ -50,6 +50,19 @@
       });
       $log.info(biz);
     }
+
+    // function uniqueUpVote(){
+    //   businesses.filter('uniqueId', function () {
+    //   return function(inputs,filterValues) {
+    //   var output = [];
+    //   angular.forEach(inputs, function (input) {
+    //     if (filterValues.indexOf(input.id) !== true)
+    //         output.push(input);
+    //    });
+    //    return output;
+    //   };
+    //   });
+    // }
 
     return service;
   }

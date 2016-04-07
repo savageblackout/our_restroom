@@ -4,6 +4,7 @@ var favicon      = require('serve-favicon');
 var logger       = require('morgan');
 var bodyParser   = require('body-parser');
 var debug        = require('debug')('app:http');
+var cookie       = require('cookie');
 
 /*
  * SETUP
@@ -28,6 +29,16 @@ app.locals.title = app.get('title');
 /*
  * MIDDLEWARE STACK
  */
+
+ // Assign a unique id to anonymous users to
+ // to limit the amout of upVote clicks per biz, per site visitor
+ // app.use(function(req, res, next) {
+ //    console.log(userId);
+ //  if(!req.cookies.userId) {
+ //    res.cookie("userId", Date.now(), { maxAge: 900000, httpOnly: true });
+ //  }
+ //  next();
+ // });
 
 // CORS allows a separate client, like Postman, to send requests
 // (in development only…)
