@@ -36,10 +36,29 @@ media such as Twitter.
 
 #USE
 
-Arriving at the welcome page, you will have the option to read about the site/project,
+Arriving at the welcome page,  
+
+![welcome page](https://i.imgur.com/5aSjvz7.png) 
+
+
+you will have the option to read about the site/project,  
+
+![About page](https://i.imgur.com/LoqpxuS.png)
+
 fill out a form with business information that you would like to be educated about
-the benefits of non-gender-specific single-stall restrooms, see a list of businesses that 
-are in the site's database, and search this list of businesses in the site's database.
+the benefits of non-gender-specific single-stall restrooms,  
+
+![form page](https://i.imgur.com/erIu9DQ.png) 
+
+see a list of businesses that are in the site's database,   
+
+![list of Businesses page](https://i.imgur.com/P3WxZlZ.png)
+
+
+and search this list of businesses in the site's database.  
+
+![search businesses](https://i.imgur.com/kv5EySr.png)
+
 In addition, if you see a business that you would like to add to the database by
 filling out the name and address on the Educate a Business page already exists 
 in the database, you can click the "+" next to the business to give it an "up vote".
@@ -97,7 +116,12 @@ Stay tuned for updates! If you would like to check back and see that a business
 that you have added to the database has altered their restroom policy, we will be updating 
 our database on a regular basis. The admin of the site will have the capability
 of updating businesses on the database. Users that have signed up 
-to receive updates will be sent this information via email. 
+to receive updates will be sent this information via email.
+
+#FOLLOW US ON
+- [Twitter](https://twitter.com/ourrestroom)
+- [Instagram](http://instagram.com/ourrestroom)
+- [Facebook](https://www.facebook.com/OURrestroom)
 
 
 #RESOURCES
