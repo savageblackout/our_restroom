@@ -88,7 +88,7 @@ database!
 
 **Our API currently returns JSON.** 
 
-##Actions: `/`
+##ACTIONS: `/paths/`
 
 ##GET: `api/businesses`  
 gets the index of businesses  
@@ -99,7 +99,7 @@ gets the index of businesses
 - `email: Type: String`
 - `twitterHandle: Type: String`
 - `upVotes: Type: Number`
-- `updatedPolicy: Type: Text`
+- `upVoters: [{Type: String}] 
 
 ##POST: `api/businesses`  
 post a new business to the database
@@ -108,10 +108,13 @@ post a new business to the database
 updates the "up vote" parameter of the business with one vote per click, 
 per business, per user
 
-##GET: `api/searches`  
-gets the index of businesses returned as a result of a user search  
 
+#ROADBLOCKS
 
+Working with nodemailer has been a challenge, and requiring secret keys and access IDs
+is a constant stress, thanks to Phil and his tales of terror involving 
+porn bots offshores taking advantage of unwitting students pushing secret things to
+their github repos.
 
 #ON THE HORIZON
 

@@ -9,33 +9,33 @@
     $stateProvider
     .state("welcome", {
       url: "/",
-      templateUrl: "/templates/welcome.html"
+      templateUrl: "app/templates/welcome.html"
     })
     .state("about", {
       url: "/about",
-      templateUrl: "/templates/about.html"
+      templateUrl: "app/templates/about.html"
     })
     .state("businesses", {
       url: "/businesses",
-      templateUrl: "/templates/businesses.html",
+      templateUrl: "app/templates/businesses.html",
       controller: "BusinessController",
       controllerAs: "vm"
     })
     .state("add", {
       url: "/add",
-      templateUrl: "/templates/business_form.html",
+      templateUrl: "app/templates/business_form.html",
       controller: "AddController",
       controllerAs: "vm"
     })
     .state("search", {
       url: "/searches",
-      templateUrl: "/templates/name.html",
+      templateUrl: "app/templates/name.html",
       controller: "BusinessController",
       controllerAs: "vm"
     })
     .state("success", {
       url: "/success",
-      templateUrl: "/templates/successful_submit.html",
+      templateUrl: "app/templates/successful_submit.html",
       controller: "BusinessController",
       controllerAs: "vm"
     });

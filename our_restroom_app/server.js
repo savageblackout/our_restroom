@@ -6,19 +6,18 @@ var bodyParser   = require('body-parser');
 var debug        = require('debug')('app:http');
 var cookie       = require('cookie');
 var cookieParser = require('cookie-parser');
+var env          = require('dotenv');
 var nodemailer   = require('nodemailer');
 var sesTransport = require('nodemailer-ses-transport');
-var transporter = nodemailer.createTransport(sesTransport(options));
-
 
 /*
  * SETUP
  */
 
 // Load local libraries.
-var env      = require('./config/environment'),
-    mongoose = require('./config/database');
-    routes   = require('./routes/api.routes');
+var env      = require('./app/config/environment'),
+    mongoose = require('./app/config/database');
+    routes   = require('./app/config/api.routes');
 
 // Instantiate a server application.
 var app = express();
