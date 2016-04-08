@@ -14,7 +14,10 @@ form.educate {
   margin: 0 auto;
   text-align: center;
 }
+#form-container-success {
+  max-width: 40rem;
 
+}
 .form-group {
   color: white;
 }
@@ -22,8 +25,9 @@ form.educate {
 .back-to-biz-btn {
   color: black;
   font-size: 2rem;
-  padding-left: 0em;
+  padding-left: 1rem;
   margin-left: 1rem;
+  border-radius: 1rem;
 }
 
 .search-btn {
@@ -40,8 +44,10 @@ form.educate {
 }
 
 .add-business {
-  /*height: 35px;
-  margin-top: -18px;*/
+  height: 5rem;
+  width: 21rem;
+  font-size: 2rem;
+  padding-top: 1rem;
 }
 
 .search-stuff {

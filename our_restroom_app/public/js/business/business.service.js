@@ -3,9 +3,9 @@
 
   angular.module("our").factory("businessService", businessService);
 
-  businessService.$inject = ["$log", "$http"];
+  businessService.$inject = ["$log", "$http", "$state"];
 
-  function businessService($log, $http) {
+  function businessService($log, $http, $state) {
     $log.info("business service loaded!");
     var vm = this;
     var service = {
@@ -56,6 +56,11 @@
       $log.info(biz);
     }
 
+    function successfulSubmit() {
+      if(create()){
+      $state.go("success");
+      }
+    }
     return service;
 
     // function clickLimit() {

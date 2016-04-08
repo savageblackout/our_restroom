@@ -30,7 +30,13 @@
     .state("search", {
       url: "/searches",
       templateUrl: "/templates/name.html",
-      controller: "SearchController",
+      controller: "BusinessController",
+      controllerAs: "vm"
+    })
+    .state("success", {
+      url: "/success",
+      templateUrl: "/templates/successful_submit.html",
+      controller: "BusinessController",
       controllerAs: "vm"
     });
 

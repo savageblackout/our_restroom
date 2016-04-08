@@ -18,6 +18,8 @@
     };
     vm.submitBusinessForm = submitBusinessForm;
     vm.businessService = businessService;
+    vm.successfulSubmit = businessService.successfulSubmit;
+
 
 
     // FUNCTIONS
@@ -26,12 +28,16 @@
         .create(vm.bizInfo)
         .then(
           function() {
-            $state.go("businesses");
+            $state.go("success");
           },
           function(err) { $log.info("Error:", err); }
         );
     }
     $log.info("Add Controller loaded!");
+
+    vm.submitted = function() {
+
+    }
   }
 
 })();
