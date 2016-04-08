@@ -36,6 +36,8 @@ media such as Twitter.
 
 #USE
 
+[Start here](https://hidden-sea-10254.herokuapp.com)
+
 Arriving at the welcome page,  
 
 ![welcome page](https://i.imgur.com/5aSjvz7.png) 
