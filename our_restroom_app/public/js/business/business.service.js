@@ -19,7 +19,7 @@
       $http.get("/api/businesses").then(function(res) {
         service.businesses = res.data;
       }, function(err) {
-        $log.info(err);
+          $log.info(err);
       });
     }
 
@@ -34,7 +34,7 @@
           'Content-Type': 'application/json'
         }
       }).then(function(res) {
-        service.businesses.push(res.data);
+          service.businesses.push(res.data);
       });
     }
 
@@ -48,12 +48,12 @@
           'Content-Type': "application/json"
         }
        }).then(function(res) {
-        $log.info("Success: ", res.data.upVote);
-        if(res.data.upVote != biz.upVote) biz.upVote++;
-      }, function(err) {
-        $log.info(err);
-      });
-      $log.info(biz);
+          $log.info("Success: ", res.data.upVote);
+          if(res.data.upVote != biz.upVote) biz.upVote++;
+        }, function(err) {
+            $log.info(err);
+        });
+          $log.info(biz);
     }
 
     function successfulSubmit() {
@@ -62,10 +62,6 @@
       }
     }
     return service;
-
-    // function clickLimit() {
-    //   var u
-    // }
   }
 
 })();

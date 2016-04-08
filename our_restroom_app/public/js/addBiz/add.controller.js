@@ -21,7 +21,6 @@
     vm.successfulSubmit = businessService.successfulSubmit;
 
 
-
     // FUNCTIONS
     function submitBusinessForm() {
       businessService
@@ -33,11 +32,9 @@
           function(err) { $log.info("Error:", err); }
         );
     }
+
     $log.info("Add Controller loaded!");
 
-    vm.submitted = function() {
-
-    }
   }
 
 })();

@@ -14,10 +14,16 @@ form.educate {
   margin: 0 auto;
   text-align: center;
 }
+
 #form-container-success {
   max-width: 40rem;
-
 }
+
+#back-to-biz-btn{
+  margin-top: 2rem;
+  height: 4rem;
+}
+
 .form-group {
   color: white;
 }
@@ -74,8 +80,8 @@ body {
 
 .navbar .navbar-default{
   background-color: #53B969;
-
 }
+
 input .form-control {
   border-radius: 4em;
 }
@@ -84,8 +90,7 @@ label {
   font-size: 3rem;
 }
 
-ul
-{
+ul {
 list-style-type: none;
 }
 
@@ -93,7 +98,7 @@ list-style-type: none;
   font-size: 3rem;
 }
 
-.col-md-9{
+.col-md-9 {
   padding-top: 2em;
   font-size: 2rem;
   text-align: center;
@@ -118,7 +123,6 @@ h4 {
 .glyphicon-ok {
   color: black
 }
-
 
 .full-logo-about {
   width: 15em;

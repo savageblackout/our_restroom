@@ -4,23 +4,23 @@
     <h2>You have successfully submitted a business to our database!</h2>
     <br>
     <span>The business will receive an informational postcard detailing the
-    benefits of changing their restrooms to gender non-specific.</span>
+    benefits of changing their sinlge-stall, gendered restrooms to gender non-specific.</span>
     <br>
     <span>Want to stay up to date with everything going on with OUR Restroom?
     </span>
-    <div class="container">
-      <form class="signUp" name="signUpForm" novalidate ng-submit="#">
+    <div class="container" id="form-container-success">
+      <form class="signUp" name="signUpForm" novalidate>
         <div class="form-group">
           <label for="name">Name</label>
-          <input type="name" ng-model="#" required class="form-control input-lg" id="userName" placeholder="Name">
+          <input type="name" required class="form-control input-lg" id="userName" placeholder="Name">
         </div>
         <div class="form-group">
           <label for="email">Email</label>
-          <input type="userEmail" ng-model="#" required class="form-control input-lg" id="userEmail" placeholder="Email">
+          <input type="userEmail" required class="form-control input-lg" id="userEmail" placeholder="Email">
         </div>
         <button type="submit"  class="btn btn-default btn-block">Submit</button>
       </form>
-      <button ng-hide="vm.claire" ng-click="vm.showAfterSearch()" class="btn btn-default back-to-biz-btn">Back to All Businesses</button>
+      <button ui-sref="businesses" class="btn btn-default" id="back-to-biz-btn">Back to All Businesses</button>
     </div>
   </div>
 

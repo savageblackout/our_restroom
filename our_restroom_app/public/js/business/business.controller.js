@@ -15,6 +15,8 @@
     vm.getBizName = getBizName;
     vm.claire = true;
     vm.showAfterSearch = showAfterSearch;
+    vm.showAllBiz = businessService.showAllBiz;
+
 
     // FUNCTIONS
 
