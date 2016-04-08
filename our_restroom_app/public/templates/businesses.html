@@ -25,7 +25,7 @@
 <div class="row">
   <ul>
     <li ng-repeat="biz in vm.businessService.businesses track by $index">
-      <span id="biz-name">{{biz.name}}&nbsp;&nbsp; <span class="glyphicon glyphicon-plus" ng-click="vm.upVote(biz)"></span>&nbsp;&nbsp; {{biz.upVote}} up votes</span>
+      <span id="biz-name">{{biz.name}}&nbsp;&nbsp; <span class="glyphicon glyphicon-plus cursor-pointer" ng-click="vm.upVote(biz)"></span>&nbsp;&nbsp; {{biz.upVote}} up votes</span>
       <h4>{{biz.address1}}</h4>
       <h4>{{biz.address2}}</h4>
       <h4>{{biz.twitterHandle}}</h4>

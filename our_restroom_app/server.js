@@ -6,6 +6,9 @@ var bodyParser   = require('body-parser');
 var debug        = require('debug')('app:http');
 var cookie       = require('cookie');
 var cookieParser = require('cookie-parser');
+var nodemailer   = require('nodemailer');
+var sesTransport = require('nodemailer-ses-transport');
+var transporter = nodemailer.createTransport(sesTransport(options));
 
 
 /*
@@ -24,9 +27,8 @@ var app = express();
 app.set('title', process.env.TITLE);
 app.set('safe-title', process.env.SAFE_TITLE);
 
-// Create local variables for use thoughout the application.
+// Create local variables for use throughout the application.
 app.locals.title = app.get('title');
-
 
 /*
  * MIDDLEWARE STACK
