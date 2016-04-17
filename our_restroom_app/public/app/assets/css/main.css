@@ -70,12 +70,23 @@ h1 {
   color: white !important;
   font-family: "Gotham Rounded", sans-serif !important;
 }
+#contact-success {
+  text-align: center;
+}
+
+#contact-success-btn {
+  width: 16rem;
+  margin: 0 auto;
+}
 
 body {
   background-color: #53B969 !important;
   z-index: -100;
   font-size: 5em;
   color: white;
+}
+.nav li a:hover{
+  background-color: none;
 }
 
 .navbar .navbar-default{

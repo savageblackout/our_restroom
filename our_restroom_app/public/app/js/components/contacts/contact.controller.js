@@ -15,11 +15,18 @@
     };
     vm.contactService = contactService;
     vm.submitContact = submitContact;
-    // vm.create = vm.contactService.create;
+    vm.create = vm.contactService.create;
     // FUNCTIONS
 
-    function submitContact(data) {
+    function submitContact() {
       $log.info("submit button functions!");
+      contactService
+      .create(vm.contactInfo)
+      .then(
+        function() {
+          $state.go("contactsuccess");
+        }, function(err) { $log.info("Error: ", err); }
+      );
 
     }
 
