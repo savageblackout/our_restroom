@@ -14,24 +14,24 @@
       create: create,
       contacts: [],
     }
-    return service;
     // FUNCTIONS
 
     function create(data) {
-    return $http({
-      method: 'POST',
-      url:    '/api/contacts',
-      data:   data,
-      headers: {
-        'Content-Type': 'application/json'
-      }
-    }).then(function(res) {
-        service.contacts.push(res.data);
-    });
+      return $http({
+        method: 'POST',
+        url:    '/api/contacts',
+        data:   data,
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      }).then(function(res) {
+          service.contacts.push(res.data);
+      });
     }
 
+    $log.info("contact Service loaded!");
+    return service;
 
-  $log.info("contact Service loaded!");
   }
 
 

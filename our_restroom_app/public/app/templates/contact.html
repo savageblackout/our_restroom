@@ -8,6 +8,6 @@
       <label for="email">Email</label>
       <input type="userEmail" ng-model="vm.contactInfo.email" required class="form-control input-lg" id="userEmail" placeholder="Email">
     </div>
-    <button type="submit" ng-click="submitContact()" ng-disabled="signUpForm.$invalid" class="btn btn-default btn-block">Submit</button>
+    <button type="submit" ng-click="vm.submitContact(data)" ng-disabled="signUpForm.$invalid" class="btn btn-default btn-block">Submit</button>
   </form>
 </div>

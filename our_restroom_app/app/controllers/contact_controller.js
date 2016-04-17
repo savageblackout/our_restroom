@@ -11,7 +11,7 @@ function index(req, res) {
 }
 
 function create(req, res) {
-  var contact      = new Contact();   // create a new instance of the business model
+  var contact      = new Contact();   // create a new instance of the contact model
   var data         = req.body;
 
   contact.name              = req.body.name;

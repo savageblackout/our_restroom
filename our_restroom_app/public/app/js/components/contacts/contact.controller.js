@@ -18,7 +18,7 @@
     // vm.create = vm.contactService.create;
     // FUNCTIONS
 
-    function submitContact() {
+    function submitContact(data) {
       $log.info("submit button functions!");
 
     }
