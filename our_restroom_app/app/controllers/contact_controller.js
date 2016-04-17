@@ -27,29 +27,30 @@ function create(req, res) {
     res.json(savedContact);
   });
 
-  // var transporter = nodemailer.createTransport({
-  //   service: "Gmail",
-  //   auth: {
-  //     user: "ourrestroomtest@gmail.com",
-  //     pass: "thisisatest"
-  //   }
-  // })
-  // var mailOptions = {
-  //   from: "John Doe <johndoe@email.com>",
-  //   to: "ourrestroomtest@gmail.com",
-  //   subject: "Website Submission",
-  //   text: "you have a new submission with the following details...Name: '+req.body.name+ ' Email: '+req.body.email+ '",
-  //   html: "<p>you have a new submission with the following details:</p><ul><li>Name: '+req.body.name+ '</li><li>Email: '+req.body.email+ '</li></ul>"
-  // };
-  // transporter.sendMail(mailOptions, function(err, info) {
-  //   if(err){
-  //     console.log(err);
-  //     res.redirect("/");
-  //   }else{
-  //     console.log("Message sent: ", info.response);
-  //     res.redirect("/");
-  //   }
-  // })
+    // receive an email when user provides name/email contact
+  var transporter = nodemailer.createTransport({
+    service: "Gmail",
+    auth: {
+      user: "ourrestroomtest@gmail.com",
+      pass: "thisisatest"
+    }
+  })
+  var mailOptions = {
+    from: "John Doe <johndoe@email.com>",
+    to: "ourrestroomtest@gmail.com",
+    subject: "Website Submission",
+    text: "you have a new submission with the following details...Name: '+req.body.name+ ' Email: '+req.body.email+ '",
+    html: "<p>you have a new submission with the following details:</p><ul><li>Name: '+req.body.name+ '</li><li>Email: '+req.body.email+ '</li></ul>"
+  };
+  transporter.sendMail(mailOptions, function(err, info) {
+    if(err){
+      console.log(err);
+      res.redirect("/");
+    }else{
+      console.log("Message sent: ", info.response);
+      res.redirect("/");
+    }
+  })
 
 };
 

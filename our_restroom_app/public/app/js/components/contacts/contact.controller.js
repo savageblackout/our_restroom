@@ -10,8 +10,8 @@
 
     // BINDINGS
     vm.contactInfo = {
-      name: "Larry Harry",
-      email: "larry@email.com"
+      name: "",
+      email: ""
     };
     vm.contactService = contactService;
     vm.submitContact = submitContact;
