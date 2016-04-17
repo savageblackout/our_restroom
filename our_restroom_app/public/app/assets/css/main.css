@@ -86,7 +86,8 @@ body {
   color: white;
 }
 .nav li a:hover{
-  background-color: none;
+  background-color: transparent;
+  cursor: pointer;
 }
 
 .navbar .navbar-default{
