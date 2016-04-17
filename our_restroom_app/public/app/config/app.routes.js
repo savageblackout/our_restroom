@@ -38,6 +38,12 @@
       templateUrl: "app/templates/successful_submit.html",
       controller: "BusinessController",
       controllerAs: "vm"
+    })
+    .state("contact", {
+      url: "/contacts",
+      templateUrl: "app/templates/contact.html",
+      controller: "ContactController",
+      controllerAs: "vm"
     });
 
     $urlRouterProvider.otherwise("/");

@@ -1,6 +1,7 @@
-var mongoose = require('./database');
+var mongoose = require("./database");
 
-var Business = require('../models/business');
+var Business = require("../models/business"),
+    Contact  = require("../models/contact");
 
 var businesses = [
   { // 0
@@ -58,4 +59,25 @@ Business.remove({}, function(err, succ){
   });
 });
 
+var contacts = [
+{
+  name: "Toby McGuire",
+  email: "toby@gmail.com"
+},
+{
+  name: "Rona",
+  email: "rona@email.com"
+},
+{
+  name: "Beverly",
+  email: "beverly@email.com"
+}
+];
 
+Contact.remove({}, function(err, succ){
+  if(err) console.log(err);
+  Contact.create(contacts, function(err, contacts){
+    if(err) console.log(err);
+    console.log("Contact created: ", contacts.length)
+  });
+});
