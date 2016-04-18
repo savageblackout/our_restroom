@@ -50,7 +50,10 @@
       templateUrl: "app/templates/contact_success.html",
       controller: "ContactController",
       controllerAs: "vm"
-
+    })
+    .state("aboutus", {
+      url: "/aboutus",
+      templateUrl: "app/templates/about_us.html"
     });
 
     $urlRouterProvider.otherwise("/");

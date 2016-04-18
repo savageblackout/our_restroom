@@ -16,6 +16,7 @@
     vm.contactService = contactService;
     vm.submitContact = submitContact;
     vm.create = vm.contactService.create;
+
     // FUNCTIONS
 
     function submitContact() {

@@ -11,7 +11,7 @@ function index(req, res) {
 }
 
 function create(req, res) {
-  var contact      = new Contact();   // create a new instance of the contact model
+  var contact      = new Contact();
   var data         = req.body;
 
   contact.name              = req.body.name;
@@ -36,19 +36,20 @@ function create(req, res) {
     }
   })
   var mailOptions = {
-    from: "John Doe <johndoe@email.com>",
+    from: contact.name,
     to: "ourrestroomtest@gmail.com",
-    subject: "Website Submission",
-    text: "you have a new submission with the following details...Name: '+req.body.name+ ' Email: '+req.body.email+ '",
-    html: "<p>you have a new submission with the following details:</p><ul><li>Name: '+req.body.name+ '</li><li>Email: '+req.body.email+ '</li></ul>"
+    subject: "User Added to Contact Database",
+    text: "Hi! I would like to be added to the contact list to receive OURrestroom updates. Name:" +contact.name+ "Email: "+contact.email,
+    html: "<p>Hi! I would like to be added to the contact list to receive OURrestroom updates.</p><ul><li>Name:" +contact.name+ "</li><li>Email: "+contact.email+ "</li></ul>"
   };
+  console.log(req.body);
   transporter.sendMail(mailOptions, function(err, info) {
     if(err){
       console.log(err);
       res.redirect("/");
     }else{
       console.log("Message sent: ", info.response);
-      res.redirect("/");
+      // res.redirect("/");
     }
   })
 
