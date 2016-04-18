@@ -5,7 +5,7 @@
 
   AddController.$inject = ["$log", "businessService", "$state"];;
 
-  function AddController($log, businessService, $state) {;
+  function AddController($log, businessService, $state) {
     var vm = this;
 
     // BINDINGS
@@ -33,7 +33,7 @@
         );
     }
 
-  })
+
     $log.info("Add Controller loaded!");
 
   }

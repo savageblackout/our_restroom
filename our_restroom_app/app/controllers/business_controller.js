@@ -1,4 +1,6 @@
 var Business = require("../models/business");
+var nodemailer = require("nodemailer");
+var transporter = nodemailer.createTransport();
 
 function index(req, res) {
   if(req.query.search){
@@ -40,6 +42,31 @@ function create(req, res) {
     // return the business
     res.json(savedBusiness);
   });
+   var transporter = nodemailer.createTransport({
+    service: "Gmail",
+    auth: {
+      user: "ourrestroomtest@gmail.com",
+      pass: "thisisatest"
+    }
+  })
+  var mailOptions = {
+    from: "OURrestroom App",
+    to: "ourrestroomtest@gmail.com",
+    subject: "A User Added a Business to the Database!",
+    text: "The following business was added to the database: Business Name:" +business.name+ "Business Address: "+business.address1+ "&nbsp;" +business.address2+ "Business Email: " +business.email+ "Business Twitter: " +business.twitterHandle,
+    html: "<p>The following business was added to the database:</p><ul><li>Business Name:" +business.name+ "</li><li>Business Address: "+business.address1+ "</li><li>Business City, State &Zip:" +business.address2+ "</li><li>Business Email: " +business.email+ "</li><li>Business Twitter: " +business.twitterHandle+ "</li></ul>"
+  };
+  console.log(req.body);
+  transporter.sendMail(mailOptions, function(err, info) {
+    if(err){
+      console.log(err);
+      res.redirect("/");
+    }else{
+      console.log("Message sent: ", info.response);
+      // res.redirect("/");
+    }
+  })
+
 };
 var update = function(req, res) {
   var id = req.params.id;
