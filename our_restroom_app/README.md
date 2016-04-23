@@ -71,18 +71,25 @@ Rather than flood the site's database with potential repeats of the same busines
 with the click of a button you can piggyback on a business that has already been entered in the 
 database!
 
+![success page after adding a business to the database](https://i.imgur.com/cUgOhS4.png)
+Congratulations! You have added a business to the database!
 
+![update sign up page](https://i.imgur.com/nrRcNaJ.png)
+
+Sign up for updates with your name and email address!
 
 #MODELS
   
-![user and biz models for Our Restroom](https://i.imgur.com/fSD2Dt7.png)
+![biz model for Our Restroom](https://i.imgur.com/WsjUPnH.png)
+![contact model for OURrestroom](https://i.imgur.com/NQHzibD.png)
 
 #TECHNOLOGIES USED  
-- CSS/HTML/JavaScript: for basic structure, style, and templating  
-- Angular: for framework   
-- Express, Node.js, and mongoDB: for application functionality  
+- CSS/HTML/JavaScript: for basic structure, style, functionality, and templating  
+- Angular: for a neat framework   
+- Express, Node.js, and mongoDB: functionality and database dealings  
 - [Wexgen](https://github.com/h4w5/wexgen): for generating a WDI-specific application structure  
-- [Bootstrap](http://getbootstrap.com/): for adding snazzy style  
+- [Bootstrap](http://getbootstrap.com/): for adding snazzy style
+
 
 ##Check out User Stories on [Trello](https://trello.com/b/NClftgba/our-restroom)!
 
@@ -106,34 +113,31 @@ gets the index of businesses
 ##POST: `api/businesses`  
 post a new business to the database
 
-##PUT `api/businesses/:id`
+##PUT: `api/businesses/:id`
 updates the "up vote" parameter of the business with one vote per click, 
 per business, per user
 
+##GET: `contacts/`
+retrieves all of the users that would like to receive updates from OURrestroom
 
-#ROADBLOCKS
+##POST: `contacts/`
+adds a user to the database that would like to receive updates from OURrestroom
 
-Working with nodemailer has been a challenge, and requiring secret keys and access IDs
-is a constant stress, thanks to Phil and his tales of terror involving 
-porn bots offshores taking advantage of unwitting students pushing secret things to
-their github repos.
 
 #ON THE HORIZON
 
 Stay tuned for updates! If you would like to check back and see that a business
 that you have added to the database has altered their restroom policy, we will be updating 
 our database on a regular basis. The admin of the site will have the capability
-of updating businesses on the database. Users that have signed up 
-to receive updates will be sent this information via email.
+of updating businesses on the database. 
 
 #FOLLOW US ON
 - [Twitter](https://twitter.com/ourrestroom)
 - [Instagram](http://instagram.com/ourrestroom)
 - [Facebook](https://www.facebook.com/OURrestroom)
 
-
 #RESOURCES
-- [Everyone Is Gay](http://everyoneisgay.com/)  
-- [The Parents Project](http://theparentsproject.com/)
+- [Kristin Russo](http://www.kristinnoeline.com/)  
+
 
 
