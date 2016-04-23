@@ -108,7 +108,7 @@ gets the index of businesses
 - `email: Type: String`
 - `twitterHandle: Type: String`
 - `upVotes: Type: Number`
-- `upVoters: [{Type: String}] 
+- `upVoters: [{Type: String}]` 
 
 ##POST: `api/businesses`  
 post a new business to the database
