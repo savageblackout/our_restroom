@@ -39,9 +39,9 @@
       controller: "BusinessController",
       controllerAs: "vm"
     })
-    .state("contact", {
-      url: "/contacts",
-      templateUrl: "app/templates/contact.html",
+    .state("mailing", {
+      url: "/mailing",
+      templateUrl: "app/templates/mailing_list.html",
       controller: "ContactController",
       controllerAs: "vm"
     })
@@ -51,9 +51,9 @@
       controller: "ContactController",
       controllerAs: "vm"
     })
-    .state("aboutus", {
-      url: "/aboutus",
-      templateUrl: "app/templates/about_us.html"
+    .state("contact", {
+      url: "/contactus",
+      templateUrl: "app/templates/contact_form.html"
     });
 
     $urlRouterProvider.otherwise("/");
