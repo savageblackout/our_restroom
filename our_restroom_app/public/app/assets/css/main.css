@@ -66,10 +66,12 @@ form.educate {
   z-index: 100;
   margin-left: 5em;
 }
+
 h1 {
   color: white !important;
   font-family: "Gotham Rounded", sans-serif !important;
 }
+
 #contact-success {
   text-align: center;
 }
@@ -85,6 +87,7 @@ body {
   font-size: 5em;
   color: white;
 }
+
 .nav li a:hover{
   background-color: transparent;
   cursor: pointer;
@@ -158,6 +161,11 @@ h4 {
   color: black !important;
 }
 
+.educate-tab {
+  padding-left: 4rem;
+  padding-top: 1rem;
+}
+
 a {
   color: white !important;
   padding-left: 1rem;
@@ -172,20 +180,16 @@ a {
   margin-left: 0em;
 }
 
-#footer-icons {
-  padding-right: 15rem;
+#icons {
+  padding-left: 15rem;
+}
+
+#about-tab {
+  font-size: 3.5rem;
 }
 
 .btn-block {
   height: 5rem !important;
   font-size: 3rem !important;
-}
-
-.footer {
-  padding-top: 2em;
-  bottom: 0;
-}
-
-.footer li {
-  padding-left: 15rem;
+  color: black !important;
 }
