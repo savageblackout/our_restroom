@@ -25,15 +25,15 @@
         <ul class="nav navbar-nav navbar-left">
           <img alt="Brand" ui-sref="welcome" src="https://i.imgur.com/YpUDPVE.png" style="cursor: pointer">
         </ul>
-        <ul class="dropdown-toggle navbar-left" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-          <li class="dropdown">
-            <a ui-sref="#" id="about-tab">About<span class="caret"></span></a>
-              <ul class="dropdown-menu">
-                <li><a ui-sref="about">Mission</a></li>
-                <li><a ui-sref="aboutus">About Us</a></li>
-              </ul>
-          </li>
-        </ul>
+        <li class="dropdown navbar-left">
+          <a id="about-tab" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Learn More<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a ui-sref="about" style="color: black !important">Our Mission</a></li>
+            <li><a ui-sref="#" style="color: black !important">How It Works</a></li>
+            <li><a ui-sref="#" style="color: black !important">News & Resources</a></li>
+            <li><a ui-sref="#" style="color: black !important">I'm A Business!</a></li>
+          </ul>
+        </li>
         <ul class="nav navbar-nav">
           <li class="educate-tab"><a ui-sref="add">Educate A Business!</a></li>
         </ul>
@@ -49,13 +49,27 @@
   <main class="container" ui-view>
   <!-- LOAD TEMPLATES HERE -->
   </main>
-<script src="/app/js/app.module.js"></script>
-<script src="/app/config/app.routes.js"></script>
-<script src="/app/js/components/business/business.service.js"></script>
-<script src="/app/js/components/contacts/contact.service.js"></script>
-<script src="/app/js/components/business/business.controller.js"></script>
-<script src="/app/js/components/contacts/contact.controller.js"></script>
-<script src="/app/js/components/addBiz/add.controller.js"></script>
+  <footer class="footer navbar-fixed-bottom">
+    <div class="containter">
+      <ul class="nav navbar-nav navbar-left">
+        <li>
+          <a class="mailing-list" ui-sref="contact">Mailing List</a>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right contact-us">
+        <li>
+          <a class="contact-us" ui-sref="#">Contact Us</a>
+        </li>
+      </ul>
+    </div>
+  </footer>
+  <script src="/app/js/app.module.js"></script>
+  <script src="/app/config/app.routes.js"></script>
+  <script src="/app/js/components/business/business.service.js"></script>
+  <script src="/app/js/components/contacts/contact.service.js"></script>
+  <script src="/app/js/components/business/business.controller.js"></script>
+  <script src="/app/js/components/contacts/contact.controller.js"></script>
+  <script src="/app/js/components/addBiz/add.controller.js"></script>
 </body>
 </html>
 

@@ -40,6 +40,10 @@ form.educate {
   padding-left: 2rem;
 }
 
+.contact-us {
+  padding-right: 2rem;
+}
+
 .search-label {
   font-size: 3rem;
   padding-left: 3rem;
@@ -109,9 +113,14 @@ ul {
 list-style-type: none;
 }
 
+li {
+  list-style-type: none;
+}
+
 #biz-name {
   font-size: 3rem;
 }
+
 
 .col-md-9 {
   padding-top: 2em;
