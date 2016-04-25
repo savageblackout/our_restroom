@@ -16,7 +16,6 @@ function create(req, res) {
 
   mailing.name              = req.body.name;
   mailing.email             = req.body.email;
-  mailing.message           = req.body.message;
 
 
   mailing.save(function(err, savedMailing) {

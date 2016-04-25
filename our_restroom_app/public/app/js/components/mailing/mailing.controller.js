@@ -33,7 +33,4 @@
 
     $log.info("Mailing Controller loaded!");
   }
-
-
-
 })();
