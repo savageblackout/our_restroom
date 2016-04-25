@@ -18,7 +18,6 @@ function create(req, res) {
   contact.email             = req.body.email;
   contact.message           = req.body.message;
 
-
   contact.save(function(err, savedContact) {
     if (err) {
       res.send(err)
@@ -53,9 +52,7 @@ function create(req, res) {
       // res.redirect("/");
     }
   })
-
 };
-
 module.exports = {
   index: index,
   create: create

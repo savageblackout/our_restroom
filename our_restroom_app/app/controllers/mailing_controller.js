@@ -24,7 +24,7 @@ function create(req, res) {
     }
 
     // return the mailing
-    res.json(savedContact);
+    res.json(savedMailing);
   });
 
     // receive an email when user provides name/email mailing

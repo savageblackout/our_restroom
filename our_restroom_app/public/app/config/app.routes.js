@@ -41,11 +41,12 @@
     })
     .state("mailing", {
       url: "/mailing",
-      templateUrl: "MailingController",
+      templateUrl: "app/templates/mailing_list.html",
+      controller: "MailingController",
       controllerAs: "vm"
     })
-    .state("mailinguccess", {
-      url: "/mailingssuccess",
+    .state("mailingsuccess", {
+      url: "/mailingsuccess",
       templateUrl: "app/templates/mailing_success.html",
       controller: "MailingController",
       controllerAs: "vm"

@@ -12,7 +12,7 @@
 
     var service = {
       create: create,
-      contacts: [],
+      mailings: [],
     }
     // FUNCTIONS
 
@@ -28,11 +28,7 @@
           service.mailings.push(res.data);
       });
     }
-
     $log.info("mailing Service loaded!");
     return service;
-
   }
-
-
 })();
