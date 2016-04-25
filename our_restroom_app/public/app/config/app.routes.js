@@ -41,19 +41,20 @@
     })
     .state("mailing", {
       url: "/mailing",
-      templateUrl: "app/templates/mailing_list.html",
-      controller: "ContactController",
+      templateUrl: "MailingController",
       controllerAs: "vm"
     })
-    .state("contactsuccess", {
-      url: "/contactssuccess",
-      templateUrl: "app/templates/contact_success.html",
-      controller: "ContactController",
+    .state("mailinguccess", {
+      url: "/mailingssuccess",
+      templateUrl: "app/templates/mailing_success.html",
+      controller: "MailingController",
       controllerAs: "vm"
     })
     .state("contact", {
       url: "/contactus",
-      templateUrl: "app/templates/contact_form.html"
+      templateUrl: "app/templates/contact_form.html",
+      controller: "ContactController",
+      controllerAs: "vm"
     });
 
     $urlRouterProvider.otherwise("/");
