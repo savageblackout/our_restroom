@@ -62,6 +62,10 @@
       templateUrl: "app/templates/contact_success.html",
       controller: "ContactController",
       controllerAs: "vm"
+    })
+    .state("howworks", {
+      url: "/howworks",
+      templateUrl: "app/templates/how_works.html"
     });
 
     $urlRouterProvider.otherwise("/");
