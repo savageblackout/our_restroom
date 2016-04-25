@@ -22,7 +22,7 @@
     function submitMailing() {
       $log.info("submit button functions!");
       mailingService
-      .create(vm.contactInfo)
+      .create(vm.userInfo)
       .then(
         function() {
           $state.go("mailingsuccess");

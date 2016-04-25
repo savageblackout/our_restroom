@@ -16,6 +16,7 @@ function create(req, res) {
 
   contact.name              = req.body.name;
   contact.email             = req.body.email;
+  contact.message           = req.body.message;
 
 
   contact.save(function(err, savedContact) {
@@ -38,9 +39,9 @@ function create(req, res) {
   var mailOptions = {
     from: contact.name,
     to: "ourrestroomtest@gmail.com",
-    subject: "User Added to Contact Database",
-    text: "Hi! I would like to be added to the contact list to receive OURrestroom updates. Name:" +contact.name+ "Email: "+contact.email,
-    html: "<p>Hi! I would like to be added to the contact list to receive OURrestroom updates.</p><ul><li>Name:" +contact.name+ "</li><li>Email: "+contact.email+ "</li></ul>"
+    subject: "User Contact Received",
+    text: "You have received a message via the OURrestroom contact form. Name:" +contact.name+ "Email: "+contact.email+ "Message: "+contact.message,
+    html: "<p>You have received a message via the OURrestroom contact form.</p><ul><li>Name:" +contact.name+ "</li><li>Email: "+contact.email+ "Message: "+contact.message+"</li></ul>"
   };
   console.log(req.body);
   transporter.sendMail(mailOptions, function(err, info) {

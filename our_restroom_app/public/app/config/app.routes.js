@@ -55,6 +55,12 @@
       templateUrl: "app/templates/contact_form.html",
       controller: "ContactController",
       controllerAs: "vm"
+    })
+    .state("contactsuccess", {
+      url: "/contactsuccess",
+      templateUrl: "app/templates/contact_success.html",
+      controller: "ContactController",
+      controllerAs: "vm"
     });
 
     $urlRouterProvider.otherwise("/");

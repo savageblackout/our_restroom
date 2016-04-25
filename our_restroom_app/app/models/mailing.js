@@ -3,8 +3,7 @@ var mongoose = require('mongoose'),
 
 var mailingSchema = new mongoose.Schema({
   name:    { type: String },
-  email:   { type: String, required: true, uniqueness: true },
-  message: { type: String }
+  email:   { type: String, required: true, uniqueness: true }
  });
 
 var Mailing = mongoose.model('Mailing', mailingSchema);

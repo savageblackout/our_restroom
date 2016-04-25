@@ -11,7 +11,8 @@
     // BINDINGS
     vm.contactInfo = {
       name: "",
-      email: ""
+      email: "",
+      message: ""
     };
     vm.contactService = contactService;
     vm.submitContact = submitContact;
@@ -28,12 +29,7 @@
           $state.go("contactsuccess");
         }, function(err) { $log.info("Error: ", err); }
       );
-
     }
-
     $log.info("Contact Controller loaded!");
   }
-
-
-
 })();
