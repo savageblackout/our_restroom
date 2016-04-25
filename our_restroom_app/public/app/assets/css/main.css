@@ -210,8 +210,12 @@ a {
 .dropdown-menu {
   padding-top: 2rem !important;
   margin-left: 8rem;
+  cursor: pointer;
 }
 
+.main-container {
+  padding-top: 0rem;
+}
 
 .navbar-header img {
   margin-left: 0em;
