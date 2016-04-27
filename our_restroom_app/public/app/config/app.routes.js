@@ -66,6 +66,14 @@
     .state("howworks", {
       url: "/howworks",
       templateUrl: "app/templates/how_works.html"
+    })
+    .state("news", {
+      url: "/news",
+      templateUrl: "app/templates/news.html"
+    })
+    .state("iamabiz", {
+      url: "/iamabiz",
+      templateUrl: "app/templates/biz.html"
     });
 
     $urlRouterProvider.otherwise("/");

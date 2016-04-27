@@ -222,7 +222,13 @@ a {
 }
 
 #icons {
-  /*padding-left: 15rem;*/
+  margin-right: 0rem;
+}
+
+/*FIGURE OUT THIS .NAV PADDING-LEFT ISSUE*/
+
+.nav {
+  padding-left: none !important;
 }
 
 #about-tab {

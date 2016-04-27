@@ -5,7 +5,7 @@
 
   BusinessController.$inject = ["$log", "businessService", "$state", "$http"];;
 
-  function BusinessController($log, businessService, $state, $http) {;
+  function BusinessController($log, businessService, $state, $http) {
     var vm = this;
 
     // BINDINGS
@@ -35,8 +35,6 @@
       vm.claire = true;
       businessService.showAllBiz();
     }
-
-    $log.info("Business Controller loaded!");
   }
 
 })();

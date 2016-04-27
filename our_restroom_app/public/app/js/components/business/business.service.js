@@ -6,8 +6,8 @@
   businessService.$inject = ["$log", "$http", "$state"];
 
   function businessService($log, $http, $state) {
-    $log.info("business service loaded!");
     var vm = this;
+
     var service = {
       create: create,
       businesses: [],
@@ -16,13 +16,13 @@
     };
 
     function showAllBiz(){
-      $http.get("/api/businesses").then(function(res) {
+      $http.get("/api/businesses")
+      .then(function(res) {
         service.businesses = res.data;
-      }, function(err) {
+      }), function(err) {
           $log.info(err);
-      });
+          }
     }
-
     showAllBiz();
 
     function create(data) {
@@ -61,7 +61,7 @@
       $state.go("success");
       }
     }
-    return service;
-  }
+      return service;
 
+  }
 })();
