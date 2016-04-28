@@ -8,7 +8,8 @@ var businessSchema = new mongoose.Schema({
   email: { type: String, required: false },
   twitterHandle: { type: String, required: false },
   upVote: { type: Number, default: 0 },
-  upVoters: [{type: String}]
+  upVoters: [{type: String}],
+  normalized: String
 });
 
 var Business = mongoose.model('Business', businessSchema);

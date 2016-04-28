@@ -1,38 +1,22 @@
 var Business    = require("../models/business");
 var nodemailer  = require("nodemailer");
 var transporter = nodemailer.createTransport();
-// var firstBy     = require("thenby");
 
-// var businesses = [];
-// var sorter = function(a, b) {
-//   if (a.name > b.name)
-//     return 1;
-//   if (a.name < b.name)
-//     return -1;
-//   if (a.upVotes < b.upVotes)
-//     return 1;
-//   if (a.upVotes > b.Upvotes)
-//     return -1;
-//   return 0;
-// }
-//   businesses.sort(sorter);
-//   console.log(businesses);
-//   [].sort(sorter);
 
 function index(req, res) {
   if(req.query.search){
-    Business.find({}).then(function(data) {
+    Business.find({}).sort("normalized").sort("upVotes")
+    .then(function(data) {
       var reg = new RegExp(req.query.search, "i");
       data = data.filter(function(biz) {
         if(reg.test(biz.name)) return biz
       })
-
       res.json(data);
     }, function(err) {
       res.json(err);
     });
   } else{
-    Business.find({}).sort("name").sort("upVotes")
+    Business.find({}).sort("normalized").sort("upVotes")
     .then(function(data) {
       res.json(data);
     }, function(err) {
@@ -40,7 +24,6 @@ function index(req, res) {
     });
   }
 }
-
 
 function create(req, res) {
   var business               = new Business();   // create a new instance of the business model
@@ -50,6 +33,7 @@ function create(req, res) {
   business.email             = req.body.email;
   business.twitterHandle     = req.body.twitterHandle;
   business.upVote            = req.body.upVote;
+  business.normalized        = req.body.name.toLowerCase();
 
   business.save(function(err, savedBusiness) {
     if (err) {
@@ -84,7 +68,6 @@ function create(req, res) {
 
     }
   })
-
 };
 var update = function(req, res) {
   var id = req.params.id;
