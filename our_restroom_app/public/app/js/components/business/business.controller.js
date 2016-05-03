@@ -15,8 +15,6 @@
     vm.getBizName = getBizName;
     vm.claire = true;
     vm.showAfterSearch = showAfterSearch;
-    vm.showAllBiz = businessService.showAllBiz;
-
 
     // FUNCTIONS
 
@@ -25,7 +23,7 @@
       $http.get("api/businesses?search=" + val)
       .then(function(res) {
         $log.info(res.data);
-        businessService.businesses = res.data;
+        vm.businessService.businesses = res.data;
       }, function(err) {
         $log.info(err);
       });
@@ -33,7 +31,7 @@
 
     function showAfterSearch(){
       vm.claire = true;
-      businessService.showAllBiz();
+      vm.businessService.showAllBiz();
     }
   }
 

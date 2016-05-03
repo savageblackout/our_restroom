@@ -92,6 +92,8 @@ var update = function(req, res) {
   });
 }
 
+// index();
+
 module.exports = {
   index: index,
   create: create,

@@ -18,7 +18,7 @@
     function showAllBiz(){
       $http.get("/api/businesses")
       .then(function(res) {
-        service.businesses = res.data;
+        return service.businesses = res.data;
       }), function(err) {
           $log.info(err);
           }
@@ -35,11 +35,12 @@
         }
       }).then(function(res) {
           service.businesses.push(res.data);
+
       });
-    }
+       showAllBiz();
+     }
 
     function upVote(biz) {
-
       return $http({
         method: 'PUT',
         url: "api/businesses/" + biz._id,
@@ -61,7 +62,6 @@
       $state.go("success");
       }
     }
-      return service;
-
+    return service;
   }
 })();

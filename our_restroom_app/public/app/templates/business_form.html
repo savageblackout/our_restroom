@@ -10,17 +10,20 @@
 </div>
 
 <form class="educate" name="educateForm" novalidate ng-submit="vm.submitBusinessForm()">
-  <div class="form-group has-success">
+  <div class="form-group" ng-class="{ 'has error' : vm.bizInfo.name.$invalid && vm.bizInfo.name.$pristine && submitted }">
     <label for="name">Business Name</label>
     <input type="name" ng-model="vm.bizInfo.name" required class="form-control input-lg" id="bizName" placeholder="ex: Burger Kweens">
+    <p ng-show="vm.bizInfo.name.$invalid && !vm.bizInfo.name.$pristine" class="help-block">Business Name is required.</p>
   </div>
-  <div class="form-group">
+  <div class="form-group" ng-class="{ 'has error' : vm.bizInfo.address1.$invalid && vm.bizInfo.address1.$pristine && submitted }">
     <label for="addressLine1">Business Address</label>
     <input type="address" ng-model="vm.bizInfo.address1" required class="form-control input-lg" id="addressLine1" placeholder="ex: 123 Main Street">
+    <p ng-show="vm.bizInfo.address1.$invalid && !vm.bizInfo.address1.$pristine" class="help-block">Business Address is required.</p>
   </div>
-  <div class="form-group">
+  <div class="form-group" ng-class="{ 'has error' : vm.bizInfo.address2.$invalid && vm.bizInfo.address2.$pristine && submitted }">
     <label for="addressLine2">Business City, State & Zip Code</label>
     <input type="address" ng-model="vm.bizInfo.address2" required class="form-control input-lg" id="addressLine2" placeholder="ex: Every City, CA 90205">
+    <p ng-show="vm.bizInfo.address2.$invalid && !vm.bizInfo.address2.$pristine" class="help-block">Business City and tate location is required.</p>
   </div>
   <div class="form-group">
     <label for="Email1">Business Email (optional)</label>

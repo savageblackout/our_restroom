@@ -9,7 +9,7 @@ var businessSchema = new mongoose.Schema({
   twitterHandle: { type: String, required: false },
   upVote: { type: Number, default: 0 },
   upVoters: [{type: String}],
-  normalized: String
+  normalized: { type: String }
 });
 
 var Business = mongoose.model('Business', businessSchema);

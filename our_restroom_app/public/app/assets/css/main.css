@@ -65,6 +65,11 @@ form.educate {
   padding-top: 1rem;
 }
 
+.help-block {
+  font-size: 2rem;
+  color: red !important;
+}
+
 .contact-form {
   width: 50rem;
   font-size: 2rem;
