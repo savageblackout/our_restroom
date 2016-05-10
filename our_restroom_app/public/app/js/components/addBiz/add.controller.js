@@ -33,7 +33,6 @@
         .then(function(data) {
           $log.info("DATA--->", data);
             businessService.businesses.push(data.data);
-            // businessService.successfulSubmit();
             businessService.showAllBiz();
               $state.go("success");
             }
@@ -47,7 +46,6 @@
               $log.debug("EXISTING BIZ-->", vm.existingBiz.name);
 
           $log.debug("Error message client side add controller-->", err);
-          // $log.debug("VM MEssage -->", vm.message);
         })
       }
 
