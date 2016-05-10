@@ -43,7 +43,7 @@
           vm.showForm = false;
           vm.showMessage = true;
           vm.existingBiz = err.data.business[0];
-              $log.debug("EXISTING BIZ-->", vm.existingBiz.name);
+          $log.debug("EXISTING BIZ-->", vm.existingBiz.name);
 
           $log.debug("Error message client side add controller-->", err);
         })

@@ -35,14 +35,6 @@
           'Content-Type': 'application/json'
         }
       });
-      // .then(function(res) {
-      //     service.businesses.push(res.data);
-      //     successfulSubmit();
-      //     showAllBiz();
-      // })
-      // .catch(function(err){
-      //   $log.debug("Error message client side-->", err)
-      // })
      }
 
     function upVote(biz) {
