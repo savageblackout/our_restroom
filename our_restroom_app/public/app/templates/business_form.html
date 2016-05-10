@@ -1,47 +1,51 @@
 <div class="error" ng-show="vm.showMessage">
 
     {{vm.message}}
+    <span id="biz-name">{{vm.existingBiz.name}}&nbsp;&nbsp; <span class="glyphicon glyphicon-plus cursor-pointer" ng-click="vm.businessService.upVote(vm.existingBiz)"></span>&nbsp;&nbsp; {{vm.existingBiz.upVote}} up votes</span>
+
 
 
 </div>
 
-<div class="row">
-  <div class="col-md-6 col-md-offset-3">
-    By providing the information below, you are helping to educate business owners of the
-    benefits of converting gendered single-stall restrooms to gender non-specific
-    single-stall restrooms.
-    <br>
-    <br>
-    <a ui-sref="businesses" class="btn btn-default btn-block">Show All Businesses</a>
+<div ng-show="vm.showForm">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      By providing the information below, you are helping to educate business owners of the
+      benefits of converting gendered single-stall restrooms to gender non-specific
+      single-stall restrooms.
+      <br>
+      <br>
+      <a ui-sref="businesses" class="btn btn-default btn-block">Show All Businesses</a>
+    </div>
   </div>
-</div>
 
-<form class="educate" name="educateForm" novalidate ng-submit="vm.submitBusinessForm()">
-  <div class="form-group" ng-class="{ 'has error' : vm.bizInfo.name.$invalid && vm.bizInfo.name.$pristine && submitted }">
-    <label for="name">Business Name</label>
-    <input type="name" ng-model="vm.bizInfo.name" required class="form-control input-lg" id="bizName" placeholder="ex: Burger Kweens">
-    <p ng-show="vm.bizInfo.name.$invalid && !vm.bizInfo.name.$pristine" class="help-block">Business Name is required.</p>
-  </div>
-  <div class="form-group" ng-class="{ 'has error' : vm.bizInfo.address1.$invalid && vm.bizInfo.address1.$pristine && submitted }">
-    <label for="addressLine1">Business Address</label>
-    <input type="address" ng-model="vm.bizInfo.address1" required class="form-control input-lg" id="addressLine1" placeholder="ex: 123 Main Street">
-    <p ng-show="vm.bizInfo.address1.$invalid && !vm.bizInfo.address1.$pristine" class="help-block">Business Address is required.</p>
-  </div>
-  <div class="form-group" ng-class="{ 'has error' : vm.bizInfo.address2.$invalid && vm.bizInfo.address2.$pristine && submitted }">
-    <label for="addressLine2">Business City, State & Zip Code</label>
-    <input type="address" ng-model="vm.bizInfo.address2" required class="form-control input-lg" id="addressLine2" placeholder="ex: Every City, CA 90205">
-    <p ng-show="vm.bizInfo.address2.$invalid && !vm.bizInfo.address2.$pristine" class="help-block">Business City and tate location is required.</p>
-  </div>
-  <div class="form-group">
-    <label for="Email1">Business Email (optional)</label>
-    <input type="email" ng-model="vm.bizInfo.email" class="form-control input-lg" id="email1" placeholder="ex: burgerkweens@biz.com">
-  </div>
-  <div class="form-group">
-    <label for="addressLine3">Business Twitter (optional)</label>
-    <input type="twitter" ng-model="vm.bizInfo.twitterHandle" class="form-control input-lg" id="twitterHandle" placeholder="ex: @burgerKweens">
-  </div>
-  <button type="submit" ng-disabled="educateForm.$invalid" class="btn btn-default btn-block">Submit</button>
-</form>
+  <form class="educate" name="educateForm" novalidate ng-submit="vm.submitBusinessForm()">
+    <div class="form-group" ng-class="{ 'has error' : vm.bizInfo.name.$invalid && vm.bizInfo.name.$pristine && submitted }">
+      <label for="name">Business Name</label>
+      <input type="name" ng-model="vm.bizInfo.name" required class="form-control input-lg" id="bizName" placeholder="ex: Burger Kweens">
+      <p ng-show="vm.bizInfo.name.$invalid && !vm.bizInfo.name.$pristine" class="help-block">Business Name is required.</p>
+    </div>
+    <div class="form-group" ng-class="{ 'has error' : vm.bizInfo.address1.$invalid && vm.bizInfo.address1.$pristine && submitted }">
+      <label for="addressLine1">Business Address</label>
+      <input type="address" ng-model="vm.bizInfo.address1" required class="form-control input-lg" id="addressLine1" placeholder="ex: 123 Main Street">
+      <p ng-show="vm.bizInfo.address1.$invalid && !vm.bizInfo.address1.$pristine" class="help-block">Business Address is required.</p>
+    </div>
+    <div class="form-group" ng-class="{ 'has error' : vm.bizInfo.address2.$invalid && vm.bizInfo.address2.$pristine && submitted }">
+      <label for="addressLine2">Business City, State & Zip Code</label>
+      <input type="address" ng-model="vm.bizInfo.address2" required class="form-control input-lg" id="addressLine2" placeholder="ex: Every City, CA 90205">
+      <p ng-show="vm.bizInfo.address2.$invalid && !vm.bizInfo.address2.$pristine" class="help-block">Business City and tate location is required.</p>
+    </div>
+    <div class="form-group">
+      <label for="Email1">Business Email (optional)</label>
+      <input type="email" ng-model="vm.bizInfo.email" class="form-control input-lg" id="email1" placeholder="ex: burgerkweens@biz.com">
+    </div>
+    <div class="form-group">
+      <label for="addressLine3">Business Twitter (optional)</label>
+      <input type="twitter" ng-model="vm.bizInfo.twitterHandle" class="form-control input-lg" id="twitterHandle" placeholder="ex: @burgerKweens">
+    </div>
+    <button type="submit" ng-disabled="educateForm.$invalid" class="btn btn-default btn-block">Submit</button>
+  </form>
+</div>
 
 <!-- Trigger the modal with a button -->
 <!-- <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button> -->

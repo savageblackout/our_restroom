@@ -41,9 +41,11 @@ function create(req, res) {
   business.save(function(err, savedBusiness){
     if ( err ) {
       if(err.code= 11000){
-        err.message = "Business Already Exists. Give them an UpVote!"
+        err.message = business.name + " Already Exists. Give them an UpVote!"
         console.log("Error! server-side create function--->", err);
-        return res.status(500).send(err.message);
+        return Business.find({name: business.name}, function(err2, biz){
+          return res.status(500).send({error: err.message, business: biz});
+        })
       }
     }
       res.json(savedBusiness);

@@ -8,6 +8,9 @@
   function AddController($log, businessService, $state) {
     var vm = this;
     vm.message = ''
+    vm.showForm = true;
+    vm.existingBiz = '';
+
 
     // BINDINGS
 
@@ -36,9 +39,13 @@
             }
           )
         .catch(function(err){
-          // $log.info("Error:", err)
-          vm.message = err.data;
+          $log.info("Error:", err)
+          vm.message = err.data.error;
+          vm.showForm = false;
           vm.showMessage = true;
+          vm.existingBiz = err.data.business[0];
+              $log.debug("EXISTING BIZ-->", vm.existingBiz.name);
+
           $log.debug("Error message client side add controller-->", err);
           // $log.debug("VM MEssage -->", vm.message);
         })
