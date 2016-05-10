@@ -26,48 +26,52 @@ function index(req, res) {
 }
 
 function create(req, res) {
+  console.log("REQ BODY--->", req.body);
   var business               = new Business();   // create a new instance of the business model
-  business.name              = req.body.name;
-  business.address1          = req.body.address1;
-  business.address2          = req.body.address2;
-  business.email             = req.body.email;
-  business.twitterHandle     = req.body.twitterHandle;
-  business.upVote            = req.body.upVote;
-  business.normalized        = req.body.name.toLowerCase();
+  business.name =             req.body.name;
+  business.address1 =         req.body.address1;
+  business.address2 =         req.body.address2;
+  business.email =            req.body.email;
+  business.twitterHandle =    req.body.twitterHandle;
+  business.upVote =           req.body.upVote;
+  business.normalized =       req.body.name.toLowerCase();
 
-  business.save(function(err, savedBusiness) {
-    if (err) {
-      res.send(err)
+  // business = JSON.stringify(business);
+  console.log("business--->", business);
+  business.save(function(err, savedBusiness){
+    if ( err ) {
+      if(err.code= 11000){
+        err.message = "Business Already Exists. Give them an UpVote!"
+        console.log("Error! server-side create function--->", err);
+        return res.status(500).send(err.message);
+      }
     }
+      res.json(savedBusiness);
 
-    // return the business
-    res.json(savedBusiness);
+       var transporter = nodemailer.createTransport({
+        service: "Gmail",
+        auth: {
+          user: "ourrestroomtest@gmail.com",
+          pass: "thisisatest"
+        }
+      })
+      var mailOptions = {
+        from: "OURrestroom App",
+        to: "ourrestroomtest@gmail.com",
+        subject: "A User Added a Business to the Database!",
+        text: "The following business was added to the database: Business Name:" +business.name+ "Business Address: "+business.address1+ "&nbsp;" +business.address2+ "Business Email: " +business.email+ "Business Twitter: " +business.twitterHandle,
+        html: "<p>The following business was added to the database:</p><ul><li>Business Name:" +business.name+ "</li><li>Business Address: "+business.address1+ "</li><li>Business City, State &Zip:" +business.address2+ "</li><li>Business Email: " +business.email+ "</li><li>Business Twitter: " +business.twitterHandle+ "</li></ul>"
+      };
+      transporter.sendMail(mailOptions, function(err, info) {
+        if(err){
+          console.log(err);
+          res.redirect("/");
+        }else{
+          console.log("Message sent: ", info.response);
+
+        }
+      })
   });
-
-
-   var transporter = nodemailer.createTransport({
-    service: "Gmail",
-    auth: {
-      user: "ourrestroomtest@gmail.com",
-      pass: "thisisatest"
-    }
-  })
-  var mailOptions = {
-    from: "OURrestroom App",
-    to: "ourrestroomtest@gmail.com",
-    subject: "A User Added a Business to the Database!",
-    text: "The following business was added to the database: Business Name:" +business.name+ "Business Address: "+business.address1+ "&nbsp;" +business.address2+ "Business Email: " +business.email+ "Business Twitter: " +business.twitterHandle,
-    html: "<p>The following business was added to the database:</p><ul><li>Business Name:" +business.name+ "</li><li>Business Address: "+business.address1+ "</li><li>Business City, State &Zip:" +business.address2+ "</li><li>Business Email: " +business.email+ "</li><li>Business Twitter: " +business.twitterHandle+ "</li></ul>"
-  };
-  transporter.sendMail(mailOptions, function(err, info) {
-    if(err){
-      console.log(err);
-      res.redirect("/");
-    }else{
-      console.log("Message sent: ", info.response);
-
-    }
-  })
 };
 var update = function(req, res) {
   var id = req.params.id;
@@ -91,8 +95,6 @@ var update = function(req, res) {
     });
   });
 }
-
-// index();
 
 module.exports = {
   index: index,

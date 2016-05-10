@@ -15,6 +15,7 @@
       showAllBiz: showAllBiz
     };
 
+
     function showAllBiz(){
       $http.get("/api/businesses")
       .then(function(res) {
@@ -33,11 +34,15 @@
         headers: {
           'Content-Type': 'application/json'
         }
-      }).then(function(res) {
-          service.businesses.push(res.data);
-
       });
-       showAllBiz();
+      // .then(function(res) {
+      //     service.businesses.push(res.data);
+      //     successfulSubmit();
+      //     showAllBiz();
+      // })
+      // .catch(function(err){
+      //   $log.debug("Error message client side-->", err)
+      // })
      }
 
     function upVote(biz) {
@@ -51,10 +56,11 @@
        }).then(function(res) {
           $log.info("Success: ", res.data.upVote);
           if(res.data.upVote != biz.upVote) biz.upVote++;
-        }, function(err) {
-            $log.info(err);
-        });
           $log.info(biz);
+        })
+         .catch(function(err) {
+            $log.debug(err);
+        });
     }
 
     function successfulSubmit() {

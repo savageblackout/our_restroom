@@ -28,6 +28,16 @@ form.educate {
   color: white;
 }
 
+.modal-header h4{
+  color: black !important;
+  font-size: 0.75em;
+}
+
+.modal-body span{
+  color: black !important;
+  font-size: 2rem;
+}
+
 .back-to-biz-btn {
   color: black;
   font-size: 2rem;

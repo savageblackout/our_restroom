@@ -2,7 +2,7 @@ var mongoose = require('mongoose'),
     debug    = require('debug')('app:models');
 
 var businessSchema = new mongoose.Schema({
-  name:  { type: String },
+  name:  { type: String, unique: true },
   address1: { type: String },
   address2: { type: String },
   email: { type: String, required: false },
